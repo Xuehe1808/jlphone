@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* CSS Document */
+body, p, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, td, input, select, textarea, figure {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "宋体",Arial;
+  width: 100%; }
+
+a {
+  text-decoration: none; }
+
+/*li{
+    list-style:none;
+}*/
+img {
+  border: none; 
+  }
+
+.header {
+  width: 100%;
+  height: 822px;;
+  background: url(../img/login_2.png);
+  /*background-repeat:repeat-x;*/
+  background-size:100%;
+  position:relative;
+  
+}
+.header p:nth-child(1){
+	/*font-weight:600;*/
+	color:#9a9a9a;
+	font-size:120px;
+  position:absolute;
+  left:200px;
+  top:200px;
+	
+}
+.header p:nth-child(2){
+	/*font-weight:600;*/
+	color:#9a9a9a;
+	font-size:44px;
+	position:absolute;
+  left:200px;
+  top:340px;
+}
+.header p:nth-child(3){
+	/*font-weight:600;*/
+	color:#9a9a9a;
+	font-size:16px;
+	position:absolute;
+  left:200px;
+  top:400px;
+}
+/*登录部分*/
+.login{
+	width:340px;
+	height:600px;
+	background: #fdfdfd;
+	/*background: pink;*/
+	float:right;
+	margin-top:120px;
+	margin-right:140px;
+}
+.anigo{
+	height:180px;
+}
+.anigo img{
+	margin:30px 113px 10px 117px;
+}
+.anigo_a1{
+	width:300px;
+	height:400px;
+	/*background: red;*/
+	/*text-align: center;*/
+	margin:0 auto;
+}
+.anigo_a1 a:nth-child(1){
+	margin-left:100px;
+	font-size:20px;
+	color:#ff9000;
+}
+.anigo_a1 a:nth-child(2){
+	font-size:12px;
+	color:#888888;
+	float:right;
+}
+.pho{
+	margin-top:67px;
+	position:relative;
+}
+.pho input{
+	/*margin-left:5px;*/
+	width:287px;
+	height:40px;
+	border:1px solid #d8d8d8;
+	border-radius:5px;
+}
+.pho .pho_1{
+	margin-left: 5px;
+	margin-bottom: 15px;
+}
+.pho .phone{
+	font-size:12px;
+	color:red;
+	position:absolute;
+	left:10px;
+	top:46px;
+	display:none;
+}
+.pho .phone2{
+	font-size:12px;
+	color:red;
+	position:absolute;
+	left:10px;
+	top:113px;
+	display:none;
+	
+}
+.pho .phone3{
+	font-size:12px;
+	color:red;
+	position:absolute;
+	left:10px;
+	top:180px;
+	display:none;
+	
+}
+
+.pho .pho_2{
+	width:160px;
+	margin-left: 5px;
+	margin-top:10px;
+	margin-bottom: 15px;
+	
+	/*vertical-align: middle;*/
+}
+.pho #btn{
+	width:50px;
+	height:40px;
+	background: red;
+	text-align: center;
+	line-height: 40PX;
+	display: inline-block;
+}
+.pho .btn1{
+	width:50px;
+	height:40px;
+	background: white;
+	border:none;
+	color:#aaaaaa;
+}
+.pho .btn2{
+	width:287px;
+	height:40px;
+	background: white;
+	margin-top:10px;
+	margin-left:5px;
+	/*border:none;*/
+	color:#aaaaaa;
+}
+
+.pho .pho_3{
+	text-align:center;
+	font-size:16px;
+	color:white;
+	background:#ff9b19;
+}
+.anigo_a1 .pho1{
+	margin-top:40px;
+}
+
+.pho1 .pho_3{
+	margin-top:25px;
+}
+.anigo_a1 .zhuce .zhuce_a1{
+	color:#666666;
+	font-size:12px;
+	float:left;
+	margin-left: 58px;
+	margin-top:8px;
+}
+.anigo_a1 .zhuce .zhuce_a2{
+	color:#ff9000;
+	font-size:12px;	
+	text-decoration: underline;
+}
+.zhuce{
+	text-align: center;
+}
