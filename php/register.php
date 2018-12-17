@@ -11,7 +11,7 @@ $conn = mysql_connect("localhost","root","root");
 		die("数据库连接失败：".mysql_error());
 	}else{
 		//2）、选择目的地（选择操作的数据库）
-		mysql_select_db("mysql",$conn);
+		mysql_select_db("jphone",$conn);
 		$str = "select * from register where phone='$phone' and pass='$password'";
 		$result = mysql_query($str,$conn);
 		$rows = mysql_num_rows($result);

@@ -272,7 +272,7 @@ img{
 }
 /*查看详情*/
 .bigbox{
-	width:1190px;
+	width:1193px;
 	margin:0 auto; 
 	overflow: hidden;
 	margin-bottom:16px;	
@@ -282,7 +282,7 @@ img{
 	background:white;
 	overflow: hidden;
 	float: left;
-	margin-right: 2px;
+	margin-right:1px;
 	margin-bottom:2px;
 }
 .shouj1:nth-child(4n){

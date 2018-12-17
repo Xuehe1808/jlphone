@@ -275,7 +275,7 @@ img{
 .goldtwo3 .goldtwo3_1{
 	width:35px;
 	height:35px;
-	border:1px solid #e24e26;
+	/*border:1px solid #e24e26;*/
 	display:block;
 	margin-top:22px;
 }
@@ -315,7 +315,6 @@ img{
 	color:#a5a29d;
 	text-align: center;
 	line-height:24px;
-	border:1px solid #f1461b;
 }
 .goldtwo4 .goldtwo4_z .goldtwo4_2{
 	position:absolute;
@@ -372,6 +371,36 @@ img{
 	font-size:20px;
 	line-height: 24px;
 	border:1px solid  #dddddd;
+}
+.goldtwo6{
+	margin-top:70px;
+	margin-bottom:20px;
+	overflow: hidden;
+}
+
+
+.goldtwo6 li{
+	float:left;
+	margin-right:8px;
+}
+.goldtwo6 .goldtwo6_p1{
+	color:#333333;
+}
+.goldtwo6_p2,.goldtwo6_p3,.goldtwo6_p4{
+	color:#ef4222;
+}
+.goldtwo7{
+	clear:both;	
+}
+.goldtwo7_p1{
+	width:140px;
+	height:50px;
+	background:#ef4222;
+	font-size:20px;
+	text-align:center;
+	line-height:50px;
+	border-radius:5px;
+	color:ghostwhite;
 }
 
 .book_infos {
@@ -769,4 +798,3 @@ th,td{
 	margin-top:20px ;
 	padding-bottom:40px;	
 }
-	

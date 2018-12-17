@@ -88,7 +88,7 @@
     		</ul>
     		<ul class="goldtwo2">
     			<li>现&nbsp;&nbsp;&nbsp;&nbsp;价:</li>
-    			<li>￥1299</li>
+    			<li>￥<span class="goldtwo2_price">2499</span></li>
     		</ul>
     		<ul class="goldtwo3">
     			<li>颜&nbsp;&nbsp;&nbsp;&nbsp;色 :</li>
@@ -116,17 +116,18 @@
     				<span class="goldtwo5_3">+</span>
     			</li>
     		</ul>
-    		<div class="buy_area c">
-                 <p class="book_infos">
-                 	<span class="lbl">您已选择：</span>
-                 	<span id="infoProduct">金钢2&nbsp;&nbsp;金典黑32GB</span>
-                 	&nbsp;&nbsp;<span id="infoProductNum">1</span>件
-                 	&nbsp;&nbsp;总计：¥<span id="infoProductTotal">1499</span>元
-                 </p>
-                <div class="op">
-					<a href="#" target="_self" hidefocus="true" class="btn_addCart btn_addCart_dis" id="JbtnAddCart">加入购物车</a>	
-                </div>
-             </div>
+    		<ul class="goldtwo6">
+    			<li class="goldtwo6_p1">您已选择：</li>
+    			<li class="goldtwo6_p2">金刚2D 爵士金16GB</li>
+    			<li class="goldtwo6_p3"><span class="goldtwo6_span1">1</span>件</li>
+    			<li class="goldtwo6_p4">总计:￥<span class="goldtwo6_span2">2499</span>元</li>
+    		</ul>
+    		<a href="shopcar.html">
+	    		<ul class="goldtwo7">
+	    			<li class="goldtwo7_p1">加入购物车</li>
+	    		</ul>
+	    		<ul>
+    		</a>
     	</div>
 	</div>
 </div>
@@ -478,5 +479,44 @@
 		}
 		
 	});
+	//点击 图片加边框
+	$(".goldtwo3_z").click(function(){
+		$(this).children("img").css({
+			"border":"1px solid #e24e26"
+		});
+		$(this).siblings().children("img").css({//同辈元素的 孩子 
+			"border":"none"
+		})
+	});
+	$(".goldtwo4_z").click(function(){
+		$(this).children("span").css({
+			"border":"1px solid #f1461b"
+		})
+	})
+	//点击加号，改数量
+	
+	let price=parseInt($(".goldtwo6_span2").html());
+	$(".goldtwo5_3").click(function(){
+		let cont=parseInt($(".goldtwo5_2").html());
+		cont++;
+		
+		let money=cont*price;
+		$(".goldtwo6_span2").html(money);
+		$(".goldtwo6_span1").html(cont);
+		$(".goldtwo5_2").html(cont);
+	});
+	$(".goldtwo5_1").click(function(){
+		let cont=parseInt($(".goldtwo5_2").html());
+		cont--;
+		if(cont<1){
+			cont=1;
+		}
+		
+		let money=cont*price;
+		$(".goldtwo6_span2").html(money);
+		$(".goldtwo6_span1").html(cont);
+		$(".goldtwo5_2").html(cont);
+	});
+	
 })
 </script>

@@ -36,13 +36,19 @@ gulp.task("copy-php",function(){
 	gulp.src("php/**/*")
 	.pipe(gulp.dest("E:\\phpStudy\\WWW\\first\\php"));
 });
+gulp.task("goodsCar",function(){
+	gulp.src("goodsCar/**/*")
+	.pipe(gulp.dest("E:\\phpStudy\\WWW\\first\\goodsCar"));
+});
+
+
 //gulp.task("sass",function(){
 //	gulp.src("sass/**/*")
 //	.pipe(sass())
 //	.pipe(gulp.dest("E:\\phpStudy\\WWW\\first\\sass"));
 //})
 
-gulp.task("build",["copy-html","copy-img","copy-css","copy-js","copy-php"],function(){
+gulp.task("build",["copy-html","copy-img","copy-css","copy-js","copy-php","goodsCar"],function(){
 	console.log("ok");
 })
 gulp.task("watch",function(){  
@@ -55,6 +61,7 @@ gulp.task("watch",function(){
 	 gulp.watch('img/**/*',["copy-img"]);
 	 gulp.watch('css/**/*',["copy-css"]);
 	 gulp.watch('js/**/*',["copy-js"]);
+	gulp.watch('goodsCar/**/*',["goodsCar"]);
 	
 	//gulp.watch("sass/**/*",["sass"]);
 });

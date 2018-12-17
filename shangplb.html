@@ -193,7 +193,7 @@
 </div>
 <!--查看详情-->
 <div class="bigbox">
-	<div class="shouj1">
+	<!--<div class="shouj1">
 		<img src="img/sp4.jpg">
 		<a class="shouj2" href="#">
 			<span>金立M7</span>
@@ -399,7 +399,8 @@
 				<i></i>
 			</a>
 		</div>
-	</div>
+	</div>-->
+	
 </div>
 <!--加载更多--> 
 <div class="more">
@@ -545,19 +546,7 @@
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$(".shouj1").hover(function(){
-		//滑过隐藏
-		$(this).find('.shouj4').css({"display":"block"});
-		//向上走
-		$(this).find('.shouj4').animate({
-			bottom:'0px'
-		},300);
-	},
-	function(){
-		$(this).find('.shouj4').animate({
-			bottom:'-111px'
-		},300);
-	})
+		
 	//集团下属公司的划过效果
 		$(".map_three").hover(function(){
 			$(".map_t_li").slideDown(500);
@@ -587,6 +576,59 @@
 		}
 		
 	});
-})
 	
+	//获取库里的数据
+	$.ajax({
+		type:"get",
+		url:"goodsCar/getGoodsList.php",
+		async:true,
+		data:{},
+		success:function(data){
+			console.log(data);
+			for(let i=0;i<data.length;i++){
+				let content="<div class='shouj1'>\
+					<img src='"+data[i].goodsImg+"'>\
+					<a class='shouj2' href='#'>\
+						<span>"+data[i].goodsName+"</span>\
+						<span>"+data[i].goodsType+"</span>\
+					</a>\
+					<p class='shouj3'>\
+						<span>￥"+data[i].goodsPrice+"</span>\
+					</p>\
+					<div class='shouj4'>\
+						<span>"+data[i].goodsDesc+"</span>\
+						<a href='shangpxq.html'>\
+							<i></i>\
+						</a>\
+					</div>\
+				</div>"	
+				$(".bigbox").append(content);
+			}
+			$(".shouj1").hover(function(){
+		//滑过隐藏
+		$(this).find('.shouj4').css({"display":"block"});
+		//向上走
+		$(this).find('.shouj4').animate({
+			bottom:'0px'
+		},300);
+	},
+	function(){
+		$(this).find('.shouj4').animate({
+			bottom:'-111px'
+		},300);
+	})
+			
+		},
+		dataType:"json",
+		complete:function(data){
+			console.log(data)
+		},
+		error:function(){
+			
+		}
+		
+	})
+	
+})
+
 </script>
